@@ -52,6 +52,10 @@ const templates = [
     // html/.well-known/matrix/client/index.html
     outFile: "./configurations/nginx/index.html",
   },
+      {
+        templateFile: "./configurations/nginx/template.nginx.conf",
+        outFile: "./configurations/nginx/nginx.conf",
+      },
 ];
 
 function populateFile(templateFile, outFile) {
