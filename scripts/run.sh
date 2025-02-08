@@ -2,7 +2,7 @@
 
 env > env.log
 
-ls /artifacts > /artifacts/artifacts_content.log
+ls "$DYNAMIC_DIR" > /artifacts/artifacts_content.log
 cat /artifacts/artifacts_content.log
 
 ls / > root_content.log
