@@ -8,10 +8,10 @@ cat /artifacts/artifacts_content.log
 ls / > root_content.log
 cat root_content.log
 
-DYNAMIC_DIR=$(ls -d /artifacts/*)
+DYNAMIC_DIR=$(find /artifacts -maxdepth 1 -type d ! -name artifacts -prune)
 
 if [ -z "$DYNAMIC_DIR" ]; then
-  echo "Error: Could not find dynamic directory in /artifacts using ls -d /artifacts/*"
+  echo "Error: Could not find dynamic directory in /artifacts using find"
 else
   echo "DYNAMIC_DIR is: $DYNAMIC_DIR"
   ls -l "$DYNAMIC_DIR" > /artifacts/artifacts_content.log
