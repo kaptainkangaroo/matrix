@@ -133,3 +133,14 @@ services:
   #     apk add --no-cache bash coreutils && \
   #     echo '0 2 * * * /backup/backup.sh' | crontab - && \
   #     crond -f
+
+volumes:
+  postgres-synapse:
+    external: true
+    name: gs44okowcs48wscsogosog08_postgres-synapse
+  postgres-sliding-sync:
+    external: true
+    name: gs44okowcs48wscsogosog08_postgres-sliding-sync
+  postgres-synapse-mas:
+    external: true
+    name: gs44okowcs48wscsogosog08_postgres-synapse-mas
