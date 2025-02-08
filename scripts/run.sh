@@ -2,6 +2,8 @@
 
 env > env.log
 
+ls /artifacts
+
 apk add --update nodejs npm
 
 npm install dotenv
