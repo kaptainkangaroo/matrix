@@ -2,7 +2,7 @@
 
 env > env.log
 
-ls /artifacts
+ls /artifacts > /artifacts/artifacts_content.log
 
 apk add --update nodejs npm
 
