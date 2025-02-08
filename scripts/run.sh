@@ -28,4 +28,5 @@ npm install dotenv
 
 node ./scripts/index.js
 
-docker compose --project-directory /artifacts -f "$COMPOSE_FILE_PATH" build
+cd "$DYNAMIC_DIR"
+docker compose build
