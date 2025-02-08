@@ -29,4 +29,4 @@ npm install dotenv
 node ./scripts/index.js
 
 cd "$DYNAMIC_DIR"
-./docker compose build
+docker compose build
