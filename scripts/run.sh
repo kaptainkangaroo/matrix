@@ -8,10 +8,14 @@ cat /artifacts/artifacts_content.log
 ls / > root_content.log
 cat root_content.log
 
-DYNAMIC_DIR=$(find /artifacts -maxdepth 1 -type d ! -name artifacts -prune)
+DYNAMIC_DIR=$(ls -d /artifacts/*)
+
 if [ -z "$DYNAMIC_DIR" ]; then
-  echo "Error: Could not find dynamic directory in /artifacts"
-  exit 1
+  echo "Error: Could not find dynamic directory in /artifacts using ls -d /artifacts/*"
+else
+  echo "DYNAMIC_DIR is: $DYNAMIC_DIR"
+  ls -l "$DYNAMIC_DIR" > /artifacts/artifacts_content.log
+  cat /artifacts/artifacts_content.log
 fi
 COMPOSE_FILE_PATH="$DYNAMIC_DIR/docker-compose.yml"
 
